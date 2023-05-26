@@ -1,0 +1,11 @@
+[global]
+	monitor = 0
+
+	font = Fira Code 8
+
+	separator_height = 5
+	padding = 10
+	horizontal_padding = 10
+	frame_width = 0
+
+	background = "#56557a"
