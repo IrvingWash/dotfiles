@@ -1,6 +1,6 @@
 local options = {
 	backup = false,
-	clipboard = 'unnamed',
+	clipboard = 'unnamedplus',
 	smarttab = true,
 	tabstop = 2,
 	shiftwidth = 2,
