@@ -1,0 +1,17 @@
+working_directory = "None"
+live_config_reload = true
+
+[window]
+padding = { x = 5, y = 5 }
+decorations = "Full"
+startup_mode = "Windowed"
+dynamic_title = true
+decorations_theme_variant = "None"
+option_as_alt = "OnlyLeft"
+
+[font]
+size = 16
+normal = { family = "Iosevka Term", style = "Regular" }
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
