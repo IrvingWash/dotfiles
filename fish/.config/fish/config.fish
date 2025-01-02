@@ -31,3 +31,4 @@ end
 # Aliases
 alias ls='eza --color=always --icons=always --classify=always -l -a --group-directories-first --show-symlinks --modified --no-permissions --no-user'
 alias tree='eza -T'
+alias ppg='cd ~/Documents/ppg'
