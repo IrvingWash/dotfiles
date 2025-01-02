@@ -1,22 +1,26 @@
 theme = catppuccin-macchiato
 
-font-size = 18
-font-family = Iosevka Term
-font-family-bold = Iosevka Term Bold
-font-family-italic = Iosevka Term Italic
-font-family-bold-italic = Iosevka Term Bold Italic
+font-size = 14
+font-family = Iosevka Nerd Font Mono
 
 background-opacity = 0.8
 background-blur-radius = 20
 
 macos-option-as-alt = true
 
+window-decoration = false
+confirm-close-surface = false
+
 # Key bindings
+# Split
+keybind = ctrl+shift+o=new_split:right
+keybind = ctrl+shift+e=new_split:down
+
 # Select splits
-keybind = super+shift+l=goto_split:right
-keybind = super+shift+h=goto_split:left
-keybind = super+shift+k=goto_split:top
-keybind = super+shift+j=goto_split:bottom
+keybind = ctrl+shift+l=goto_split:right
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+j=goto_split:bottom
 
 # Resize splits
 keybind = alt+shift+equal=equalize_splits
@@ -26,5 +30,6 @@ keybind = alt+shift+k=resize_split:up,10
 keybind = alt+shift+j=resize_split:down,10
 
 # Window
-keybind = super+w=close_window
+keybind = ctrl+shift+n=new_window
+keybind = ctrl+w=close_window
 keybind = alt+w=close_surface
