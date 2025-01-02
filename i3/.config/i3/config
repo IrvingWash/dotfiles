@@ -16,7 +16,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Start bar
-exec_always --no-startup-id killall -q polybar && polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Set background image
 exec_always feh --bg-scale ~/Images/tetris.png
