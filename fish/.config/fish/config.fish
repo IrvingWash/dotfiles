@@ -22,7 +22,7 @@ function fish_prompt
     
     set -l git_status (git status -s)
 
-    string join '' -- (set_color green) (prompt_pwd) (set_color normal) $stat (fish_git_prompt) '>'
+    string join '' -- (set_color blue) (prompt_pwd) (set_color normal) $stat (fish_git_prompt) '>'
 end
 
 # Aliases
