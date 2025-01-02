@@ -1,2 +1,5 @@
-vsync = true;
 backend = "glx";
+
+vsync = true;
+
+corner-radius = 4;
