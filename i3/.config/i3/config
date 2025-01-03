@@ -23,6 +23,9 @@ exec --no-startup-id nm-applet
 # Start bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Start CopyQ
+exec --no-startup-id copyq
+
 # Set background image
 exec_always feh --bg-scale ~/Images/tetris.png
 
