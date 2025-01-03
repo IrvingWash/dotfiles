@@ -27,7 +27,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id copyq
 
 # Set background image
-exec_always feh --bg-scale ~/Images/tetris.png
+exec_always feh --bg-fill --randomize ~/Images/Art/*
 
 floating_modifier $mod
 tiling_drag modifier titlebar
@@ -136,5 +136,5 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-gaps inner 10
-gaps outer 5
+gaps inner 20
+gaps outer 0
