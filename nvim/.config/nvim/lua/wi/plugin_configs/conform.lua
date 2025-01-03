@@ -4,7 +4,13 @@ conform.setup({
     formatters_by_ft = {
         rust = { "rustfmt" },
         odin = { "odinfmt" },
-    }
+    },
+    formatters = {
+        odinfmt = {
+            command = "odinfmt",
+            args = { "-stdin" },
+        },
+    },
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
