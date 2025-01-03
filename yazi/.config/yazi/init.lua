@@ -1,3 +1,5 @@
+---@diagnostic disable: cast-local-type
+
 function Linemode:size_and_time()
     local size = self._file:size()
 

@@ -7,3 +7,6 @@ linemode = "size_and_time"
 edit = [
     { run = 'nvim "$@"', block = true, for = "unix"}
 ]
+play = [
+    { run = 'vlc -f "$@"', block = true, for = "unix"}
+]

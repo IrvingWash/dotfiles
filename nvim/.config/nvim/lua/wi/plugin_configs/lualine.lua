@@ -1,4 +1,4 @@
-require("lualine").setup {
+require("lualine").setup({
     sections = {
         lualine_a = { "mode" },
         lualine_b = { "branch", "diff", "diagnostics" },
@@ -7,4 +7,4 @@ require("lualine").setup {
         lualine_y = { "progress" },
         lualine_z = { "location" },
     },
-}
+})

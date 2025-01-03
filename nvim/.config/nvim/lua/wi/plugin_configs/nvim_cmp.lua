@@ -1,6 +1,6 @@
 local cmp = require("cmp")
 
-cmp.setup {
+cmp.setup({
     sources = cmp.config.sources({
         { name = "nvim_lsp" },
     }),
@@ -10,4 +10,4 @@ cmp.setup {
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
         ["<C-k>"] = cmp.mapping.complete(),
     }),
-}
+})

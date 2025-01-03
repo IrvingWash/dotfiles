@@ -7,18 +7,20 @@ vim.keymap.set("n", "gh", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>rr", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>fx", vim.lsp.buf.code_action)
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-lspconfig.rust_analyzer.setup{
+lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
-}
+})
 
-lspconfig.wgsl_analyzer.setup{
+lspconfig.wgsl_analyzer.setup({
     capabilities = capabilities,
-}
+})
 
-lspconfig.lua_ls.setup{}
+lspconfig.lua_ls.setup({})
 
-lspconfig.ols.setup{
+lspconfig.ols.setup({
     capabilities = capabilities,
-}
+})
+
+lspconfig.taplo.setup({ capabilities = capabilities })
