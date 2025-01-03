@@ -55,14 +55,14 @@ local nvim_cmp = {
 }
 
 local conform = {
-    'stevearc/conform.nvim',
+    "stevearc/conform.nvim",
     opts = {},
 }
 
 local telescope = {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.8',
-    dependencies = { 'nvim-lua/plenary.nvim' }
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.8",
+    dependencies = { "nvim-lua/plenary.nvim" }
 }
 
 local git_signs = "lewis6991/gitsigns.nvim"
@@ -76,6 +76,14 @@ local diff_view = "sindrets/diffview.nvim"
 local lualine = "nvim-lualine/lualine.nvim"
 
 local nvim_colorizer = "norcalli/nvim-colorizer.lua"
+
+local barbar = {
+    "romgrk/barbar.nvim",
+    dependencies = {
+      'lewis6991/gitsigns.nvim',
+      'nvim-tree/nvim-web-devicons',
+    },
+}
 
 require("lazy").setup({
     checker = { enabled = true },
@@ -95,5 +103,6 @@ require("lazy").setup({
         diff_view,
         lualine,
         nvim_colorizer,
+        barbar,
     },
 })
