@@ -1,3 +1,5 @@
+include ./styles.conf
+
 set $mod Mod4
 
 # Font
