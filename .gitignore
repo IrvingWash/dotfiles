@@ -1,1 +1,7 @@
+*.db
+*.log
+*.pid
+
+mpdstate
+
 .DS_Store
