@@ -1,7 +1,6 @@
 format = """
 [](#9A348E)\
 $character\
-$os\
 $username\
 [](bg:#DA627D fg:#9A348E)\
 $directory\
@@ -35,12 +34,15 @@ format = "[ $user ]($style)"
 disabled = false
 
 [os]
-style = "bg:#9A348E"
+style = "bold bg:#9A348E"
 disabled = true
+[os.symbols]
+Arch = "[]($style)"
 
 [directory]
 style = "bg:#DA627D"
 format = "[ $path ]($style)"
+truncate_to_repo = true
 truncation_length = 3
 truncation_symbol = "../"
 
