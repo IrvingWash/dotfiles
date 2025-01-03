@@ -85,6 +85,8 @@ local barbar = {
     },
 }
 
+local fterm = "numToStr/FTerm.nvim"
+
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
@@ -104,5 +106,6 @@ require("lazy").setup({
         lualine,
         nvim_colorizer,
         barbar,
+        fterm,
     },
 })
