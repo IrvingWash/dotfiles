@@ -75,7 +75,7 @@ local diff_view = "sindrets/diffview.nvim"
 
 local lualine = "nvim-lualine/lualine.nvim"
 
-local nvim_hightlight_colors = "brenoprata10/nvim-highlight-colors"
+local nvim_colorizer = "norcalli/nvim-colorizer.lua"
 
 require("lazy").setup({
     checker = { enabled = true },
@@ -94,6 +94,6 @@ require("lazy").setup({
         vim_illuminate,
         diff_view,
         lualine,
-        nvim_hightlight_colors,
+        nvim_colorizer,
     },
 })

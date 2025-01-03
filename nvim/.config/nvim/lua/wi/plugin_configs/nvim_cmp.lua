@@ -10,7 +10,4 @@ cmp.setup {
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
         ["<C-k>"] = cmp.mapping.complete(),
     }),
-    formattin = {
-        format = require("nvim-highlight-colors").format
-    },
 }
