@@ -109,5 +109,3 @@ textbox {
     text-color: @blue;
     background-color: @bg-col-light;
 }
-
-# vim: ft=cfg
