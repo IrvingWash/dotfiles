@@ -32,3 +32,5 @@ keybind = alt+shift+j=resize_split:down,10
 # Window
 keybind = ctrl+shift+n=new_window
 keybind = alt+q=close_surface
+
+# vim: ft=cfg
