@@ -1,3 +1,6 @@
+def_key "ctrl-r"
+    clear_main_playlist
+    play_item
 def_key "mouse"
     mouse_event
 def_key "k"
