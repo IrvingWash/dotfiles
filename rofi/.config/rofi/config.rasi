@@ -5,5 +5,3 @@ configuration {
 }
 
 @theme "catppuccin-frappe"
-
-# vim: ft=cfg

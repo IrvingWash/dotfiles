@@ -10,7 +10,7 @@ execute_on_song_change = ~/.config/ncmpcpp/notifier.sh
 progressbar_look = "━━━"
 
 # UI Visibility
-header_visibility = "no"
+header_visibility = "yes"
 statusbar_visibility = "yes"
 titles_visibility = "yes"
 enable_window_title = "yes"

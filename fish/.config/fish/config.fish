@@ -17,5 +17,6 @@ alias ls='eza --color=always --icons=always --classify=always -l -a --group-dire
 alias tree='eza -T'
 alias ppg='cd ~/Documents/ppg'
 alias dot='cd ~/dotfiles'
+alias lazy='lazygit'
 
 starship init fish | source

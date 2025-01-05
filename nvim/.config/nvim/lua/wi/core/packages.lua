@@ -94,6 +94,8 @@ local barbar = {
 
 local fterm = "numToStr/FTerm.nvim"
 
+local comment = "numToStr/Comment.nvim"
+
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
@@ -114,5 +116,6 @@ require("lazy").setup({
         nvim_colorizer,
         barbar,
         fterm,
+        comment,
     },
 })
