@@ -1,0 +1,63 @@
+theme = "onedark"
+
+[editor]
+line-number = "relative"
+mouse = true
+scrolloff = 5
+cursorline = true
+cursorcolumn = false
+continue-comments = false
+gutters = ["diagnostics", "spacer", "diff", "spacer", "line-numbers"]
+auto-completion = true
+path-completion = true
+auto-format = true
+preview-completion-insert = true
+completion-replace = false
+auto-info = true
+bufferline = "always"
+color-modes = true
+insert-final-newline = true
+end-of-line-diagnostics = "hint"
+auto-pairs = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "version-control", "file-modification-indicator"]
+center = []
+right = ["diagnostics", "selections", "register", "position-percentage", "position"]
+separator = "|"
+mode.normal = "NOR"
+mode.insert = "INS"
+mode.select = "SEL"
+
+[editor.lsp]
+enable = true
+auto-signature-help = true
+display-inlay-hints = false
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "all"
+nnbsp = "all"
+newline = "none"
+tabpad = "all"
+
+[editor.indent-guides]
+render = true
+character = "▏"
+skip-levels = 1
