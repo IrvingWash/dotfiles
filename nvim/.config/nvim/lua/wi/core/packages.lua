@@ -96,6 +96,11 @@ local fterm = "numToStr/FTerm.nvim"
 
 local comment = "numToStr/Comment.nvim"
 
+local lsp_signature = {
+  "ray-x/lsp_signature.nvim",
+  event = "VeryLazy",
+}
+
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
@@ -117,5 +122,6 @@ require("lazy").setup({
         barbar,
         fterm,
         comment,
+        lsp_signature,
     },
 })

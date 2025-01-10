@@ -17,7 +17,9 @@ lspconfig.wgsl_analyzer.setup({
     capabilities = capabilities,
 })
 
-lspconfig.lua_ls.setup({})
+lspconfig.lua_ls.setup({
+    capabilities = capabilities,
+})
 
 lspconfig.ols.setup({
     capabilities = capabilities,
