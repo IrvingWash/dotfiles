@@ -23,4 +23,12 @@ lspconfig.ols.setup({
     capabilities = capabilities,
 })
 
+lspconfig.ts_ls.setup({
+    capabilities = capabilities,
+})
+
+lspconfig.eslint.setup({
+    capabilities = capabilities,
+})
+
 lspconfig.taplo.setup({ capabilities = capabilities })
