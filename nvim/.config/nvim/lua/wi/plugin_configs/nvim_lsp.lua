@@ -33,4 +33,10 @@ lspconfig.eslint.setup({
     capabilities = capabilities,
 })
 
-lspconfig.taplo.setup({ capabilities = capabilities })
+lspconfig.taplo.setup({
+    capabilities = capabilities
+})
+
+lspconfig.glsl_analyzer.setup({
+    capabilities = capabilities
+})
