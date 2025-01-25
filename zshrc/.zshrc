@@ -15,6 +15,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Aliases
 alias ppg="cd ~/Documents/PPG"
 alias ls="eza -la --icons"
+alias lazy="lazygit"
 
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib
