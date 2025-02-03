@@ -7,5 +7,6 @@ mpd/.config/mpd/playlists/*
 !mpd/.config/mpd/playlists/.gitkeep
 ncmpcpp/.config/ncmpcpp/previews/*
 !ncmpcpp/.config/ncmpcpp/previews/.gitkeep
+nvim/.config/nvim/lazy-lock.json
 
 .DS_Store
