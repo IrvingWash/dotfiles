@@ -97,8 +97,8 @@ local fterm = "numToStr/FTerm.nvim"
 local comment = "numToStr/Comment.nvim"
 
 local lsp_signature = {
-  "ray-x/lsp_signature.nvim",
-  event = "VeryLazy",
+    "ray-x/lsp_signature.nvim",
+    event = "VeryLazy",
 }
 
 require("lazy").setup({
