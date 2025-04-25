@@ -123,6 +123,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Resize window
+bindsym $mod+r mode "resize"
+
 mode "resize" {
         bindsym shift+m resize shrink width 10 px or 10 ppt
         bindsym shift+n resize grow height 10 px or 10 ppt
@@ -133,8 +135,6 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
-bindsym $mod+r mode "resize"
 
 gaps inner 20
 gaps outer 0
