@@ -6,7 +6,7 @@ set $mod Mod4
 font pango:Iosevka Nerd Font 10
 
 # Keyboard layout
-exec_always --no-startup-id "setxkbmap -layout us,ru && setxkbmap -option 'grp:win_space_toggle' && setxkbmap us -variant colemak_dh_ortho"
+exec_always --no-startup-id "setxkbmap -layout us,ru -variant colemak_dh_ortho, -option 'grp:win_space_toggle'"
 
 # Start compositor
 exec --no-startup-id picom
