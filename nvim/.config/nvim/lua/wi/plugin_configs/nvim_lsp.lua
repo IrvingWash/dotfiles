@@ -44,3 +44,7 @@ lspconfig.glsl_analyzer.setup({
 lspconfig.gopls.setup({
     capabilities = capabilities,
 })
+
+lspconfig.clangd.setup({
+    capabilities = capabilities,
+})
