@@ -102,16 +102,18 @@ local lsp_signature = {
 }
 
 local github_theme = {
-  'projekt0n/github-nvim-theme',
-  name = 'github-theme',
-  lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  priority = 1000, -- make sure to load this before all the other start plugins
-  config = function()
-    require('github-theme').setup({})
+    "projekt0n/github-nvim-theme",
+    name = "github-theme",
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+        require("github-theme").setup({})
 
-    vim.cmd('colorscheme github_light')
-  end,
+        vim.cmd("colorscheme github_light")
+    end,
 }
+
+local jai = "rluba/jai.vim"
 
 require("lazy").setup({
     checker = { enabled = true },
@@ -136,5 +138,6 @@ require("lazy").setup({
         comment,
         lsp_signature,
         github_theme,
+        jai,
     },
 })

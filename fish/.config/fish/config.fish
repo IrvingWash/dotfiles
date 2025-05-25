@@ -8,6 +8,9 @@ if status --is-login
   end
 end
 
+# PATH
+fish_add_path /home/irving_wash/jai/bin
+
 # Enable vi mode
 fish_vi_key_bindings
 fish_vi_cursor
