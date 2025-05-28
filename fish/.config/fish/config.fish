@@ -21,5 +21,6 @@ alias tree='eza -T'
 alias ppg='cd ~/Documents/ppg'
 alias dot='cd ~/dotfiles'
 alias lazy='lazygit'
+alias vpn='jai /home/irving_wash/local_apps/outline.jai'
 
 starship init fish | source
