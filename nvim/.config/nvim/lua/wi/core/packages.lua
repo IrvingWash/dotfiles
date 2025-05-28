@@ -35,7 +35,7 @@ local neo_tree = {
     },
 }
 
-local catpuccin = { "catppuccin/nvim", name = "catppuccin" }
+local catppuccin = { "catppuccin/nvim", name = "catppuccin" }
 
 local mason = {
     "williamboman/mason.nvim",
@@ -113,7 +113,7 @@ require("lazy").setup({
     spec = {
         nvim_tree_web_dev_icons,
         neo_tree,
-        catpuccin,
+        catppuccin,
         mason,
         lsp_config,
         tree_sitter,
