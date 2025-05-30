@@ -108,6 +108,11 @@ local scratch = {
     lazy = true,
 }
 
+local telescope_live_grep_args = {
+    "nvim-telescope/telescope-live-grep-args.nvim",
+    lazy = true,
+}
+
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
@@ -132,5 +137,6 @@ require("lazy").setup({
         lsp_signature,
         jai,
         scratch,
+        telescope_live_grep_args,
     },
 })
