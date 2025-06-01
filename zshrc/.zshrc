@@ -17,6 +17,12 @@ alias ppg="cd ~/Documents/PPG"
 alias ls="eza -la --icons"
 alias lazy="lazygit"
 
+# Functions
+# $1 - <repo_name>
+repo() {
+    gh repo view $1 -w
+}
+
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib
 
