@@ -4,3 +4,6 @@ require("gitsigns").setup({
         delay = 300,
     },
 })
+
+vim.keymap.set("n", "gn", "<cmd>Gitsigns next_hunk<CR>")
+vim.keymap.set("n", "gp", "<cmd>Gitsigns prev_hunk<CR>")
