@@ -38,3 +38,10 @@ case ":$PATH:" in
 esac
 # pnpm end
 . "/Users/agulakhszyan/.deno/env"
+
+path+=("/Users/agulakhszyan/jai/bin")
+
+export PATH
+
+export CPATH=/opt/homebrew/include
+export LIBRARY_PATH=/opt/homebrew/lib
