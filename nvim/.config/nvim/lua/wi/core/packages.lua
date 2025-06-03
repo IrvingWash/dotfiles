@@ -35,7 +35,7 @@ local neo_tree = {
     },
 }
 
-local catpuccin = { "catppuccin/nvim", name = "catppuccin" }
+local catppuccin = { "catppuccin/nvim", name = "catppuccin" }
 
 local mason = {
     "williamboman/mason.nvim",
@@ -108,12 +108,17 @@ local scratch = {
     lazy = true,
 }
 
+local telescope_live_grep_args = {
+    "nvim-telescope/telescope-live-grep-args.nvim",
+    lazy = true,
+}
+
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
         nvim_tree_web_dev_icons,
         neo_tree,
-        catpuccin,
+        catppuccin,
         mason,
         lsp_config,
         tree_sitter,
@@ -132,5 +137,6 @@ require("lazy").setup({
         lsp_signature,
         jai,
         scratch,
+        telescope_live_grep_args,
     },
 })

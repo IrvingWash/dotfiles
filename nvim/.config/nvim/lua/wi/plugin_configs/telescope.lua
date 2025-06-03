@@ -1,3 +1,4 @@
+local telescope = require("telescope")
 local builtin = require("telescope.builtin")
 
 vim.keymap.set(
@@ -15,7 +16,7 @@ vim.keymap.set(
 vim.keymap.set(
     "n",
     "<leader>fg",
-    builtin.live_grep,
+    telescope.extensions.live_grep_args.live_grep_args,
     { desc = "Telescope live grep" }
 )
 vim.keymap.set(
@@ -24,3 +25,5 @@ vim.keymap.set(
     builtin.buffers,
     { desc = "Telescope buffers" }
 )
+
+telescope.load_extension("live_grep_args")
