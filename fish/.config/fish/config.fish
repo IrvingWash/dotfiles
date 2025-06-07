@@ -23,4 +23,8 @@ alias dot='cd ~/dotfiles'
 alias lazy='lazygit'
 alias vpn='jai /home/irving_wash/local_apps/outline.jai'
 
+function repo
+    gh repo view $argv -w
+end
+
 starship init fish | source
