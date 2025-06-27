@@ -20,6 +20,7 @@ opt.tabstop = 4
 opt.smartindent = true
 opt.list = true -- render whitespace
 opt.hidden = true -- unload buffers when they are abandoned
+opt.cursorline = true
 opt.listchars = {
     space = "·",
     tab = ">-",
