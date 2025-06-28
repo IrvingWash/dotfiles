@@ -13,27 +13,7 @@ lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
 })
 
-lspconfig.wgsl_analyzer.setup({
-    capabilities = capabilities,
-})
-
 lspconfig.lua_ls.setup({
-    capabilities = capabilities,
-})
-
-lspconfig.ols.setup({
-    capabilities = capabilities,
-})
-
-lspconfig.ts_ls.setup({
-    capabilities = capabilities,
-})
-
-lspconfig.eslint.setup({
-    capabilities = capabilities,
-})
-
-lspconfig.taplo.setup({
     capabilities = capabilities,
 })
 
@@ -48,3 +28,5 @@ lspconfig.gopls.setup({
 lspconfig.clangd.setup({
     capabilities = capabilities,
 })
+
+vim.lsp.enable("cspell_ls")
