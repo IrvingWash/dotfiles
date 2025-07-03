@@ -1,10 +1,7 @@
 theme = catppuccin-macchiato
 
 font-size = 18
-font-family = Iosevka Term
-font-family-bold = Iosevka Term Bold
-font-family-italic = Iosevka Term Italic
-font-family-bold-italic = Iosevka Term Bold Italic
+font-family = Fira Code
 
 background-opacity = 0.8
 background-blur-radius = 20
