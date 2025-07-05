@@ -1,0 +1,11 @@
+# focus window
+alt - m : yabai -m window --focus west
+alt - i : yabai -m window --focus east
+alt - e : yabai -m window --focus north
+alt - n : yabai -m window --focus south
+
+# swap window
+shift + alt - m : yabai -m window --swap west
+shift + alt - i : yabai -m window --swap east
+shift + alt - e : yabai -m window --swap north
+shift + alt - n : yabai -m window --swap south
