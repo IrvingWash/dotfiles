@@ -11,4 +11,4 @@ case "$LAYOUT" in
     *) SHORT_LAYOUT=$LAYOUT;;
 esac
 
-sketchybar --set keyboard label="$SHORT_LAYOUT"
+sketchybar --set "$NAME" label="$SHORT_LAYOUT"

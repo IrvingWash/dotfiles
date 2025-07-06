@@ -48,13 +48,13 @@ sketchybar \
 
 # Right items
 sketchybar \
-    --add item keyboard right                                                      \
-        --set keyboard                                                             \
+    --add item keyboard_layout right                                               \
+        --set keyboard_layout                                                      \
             script="$PLUGIN_DIR/keyboard_layout.sh"                                \
         --add event keyboard_change "AppleSelectedInputSourcesChangedNotification" \
-        --subscribe keyboard keyboard_change                                       \
-    --add item  ip_address right                                                   \
-        --set       ip_address script="$PLUGIN_DIR/ip_address.sh"                  \
+        --subscribe keyboard_layout keyboard_change                                \
+    --add item ip_address right                                                    \
+        --set ip_address script="$PLUGIN_DIR/ip_address.sh"                        \
             update_freq=30                                                         \
         --subscribe ip_address wifi_change                                         \
     --add item volume right                                                        \
@@ -64,20 +64,20 @@ sketchybar \
         --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh"              \
         --subscribe battery system_woke power_source_change                        \
     --add item clock right                                                         \
-        --set clock icon=󰥔 update_freq=10                                          \
-        label="$(date +'%H:%M')"                                                   \
+        --set clock update_freq=10 icon=󰥔 script="$PLUGIN_DIR/clock.sh"            \
     --add item calendar right                                                      \
-        --set calendar icon= update_freq=1000                                     \
-        label="$(date +'%a %d %b')"                                                \
-    --add item slack right                                                         \
-        --set slack                                                                \
-            update_freq=60                                                         \
-            script="$PLUGIN_DIR/slack.sh"                                          \
-        --subscribe slack system_woke                                              \
+        --set calendar icon= update_freq=1000 script="$PLUGIN_DIR/calendar.sh"    \
     --add item telegram right                                                      \
         --set telegram                                                             \
-            update_freq=60                                                         \
+            update_freq=10                                                         \
             script="$PLUGIN_DIR/telegram.sh"                                       \
-        --subscribe telegram system_woke
+        --subscribe telegram system_woke                                           \
+    --add item slack right                                                         \
+        --set slack                                                                \
+            update_freq=10                                                         \
+            script="$PLUGIN_DIR/slack.sh"                                          \
+        --subscribe slack system_woke                                              \
+    --add item audio_device right                                                  \
+        --set audio_device update_freq=10 script="$PLUGIN_DIR/audio_device.sh"
 
 sketchybar --update
