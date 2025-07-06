@@ -1,12 +1,16 @@
 [mgr]
-show_hidden = true
-show_symlink = true
-linemode = "size_and_time"
+ratio          = [2, 3, 3]
+show_hidden    = true
+show_symlink   = true
+sort_dir_first = true
+scrolloff      = 10
 
 [opener]
 edit = [
     { run = 'nvim "$@"', block = true, for = "unix"}
 ]
-play = [
-    { run = 'vlc -f "$@"', block = true, for = "unix"}
+
+[previewers]
+prepend_previewers = [
+    { mime = "text/plain", run = "nvim" }
 ]

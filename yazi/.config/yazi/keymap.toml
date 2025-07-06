@@ -1,0 +1,7 @@
+[mgr]
+prepend_keymap = [
+    { on = "m", run = "leave" },
+    { on = "i", run = "enter" },
+    { on = "n", run = "arrow next" },
+    { on = "e", run = "arrow prev" },
+]

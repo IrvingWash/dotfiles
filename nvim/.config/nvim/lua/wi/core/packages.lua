@@ -109,6 +109,8 @@ local telescope_live_grep_args = {
     lazy = true,
 }
 
+local easy_align = "junegunn/vim-easy-align"
+
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
@@ -133,5 +135,6 @@ require("lazy").setup({
         jai,
         scratch,
         telescope_live_grep_args,
+        easy_align,
     },
 })
