@@ -9,4 +9,4 @@ yazi.setup({
     open_for_directories = true,
 })
 
-vim.keymap.set("n", "nb", "<cmd>Yazi<CR>")
+vim.keymap.set("n", "<leader>nb", "<cmd>Yazi<CR>")

@@ -14,7 +14,6 @@ fish_vi_cursor
 alias ls='eza --color=always --icons=always --classify=always -l -a --group-directories-first --show-symlinks --modified'
 alias tree='eza -T'
 alias ppg='cd ~/Documents/ppg'
-alias dot='cd ~/dotfiles'
 alias lazy='lazygit'
 
 # Functions
