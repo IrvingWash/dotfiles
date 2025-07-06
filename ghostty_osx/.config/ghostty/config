@@ -1,10 +1,5 @@
-theme = catppuccin-macchiato
-
 font-size = 18
-font-family = Fira Code
-
-background-opacity = 0.8
-background-blur-radius = 20
+font-family = Iosevka Term
 
 macos-option-as-alt = true
 

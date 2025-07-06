@@ -33,3 +33,5 @@ shift + alt - 7 : ~/.config/skhd/move_and_create_space_if_needed.sh 7
 shift + alt - 8 : ~/.config/skhd/move_and_create_space_if_needed.sh 8
 shift + alt - 9 : ~/.config/skhd/move_and_create_space_if_needed.sh 9
 shift + alt - 0 : ~/.config/skhd/move_and_create_space_if_needed.sh 10
+
+# vim: ft=cfg

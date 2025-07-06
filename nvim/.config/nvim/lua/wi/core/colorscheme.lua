@@ -1,4 +1,4 @@
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme base16-black-metal-gorgoroth")
 
 local current_hour = tonumber(os.date("%H"))
 

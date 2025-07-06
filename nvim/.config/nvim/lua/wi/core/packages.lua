@@ -35,7 +35,7 @@ local neo_tree = {
     },
 }
 
-local catppuccin = { "catppuccin/nvim", name = "catppuccin" }
+local black_metal = "metalelf0/base16-black-metal-scheme"
 
 local mason = {
     "williamboman/mason.nvim",
@@ -118,7 +118,7 @@ require("lazy").setup({
     spec = {
         nvim_tree_web_dev_icons,
         neo_tree,
-        catppuccin,
+        black_metal,
         mason,
         lsp_config,
         tree_sitter,
