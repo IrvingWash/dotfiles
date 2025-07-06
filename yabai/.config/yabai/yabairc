@@ -25,4 +25,8 @@ yabai -m config normal_window_opacity 0.9
 # Balance
 yabai -m config auto_balance on
 
+# Sketchybar events
+yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"
+yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger title_change &> /dev/null"
+
 # vim: ft=cfg
