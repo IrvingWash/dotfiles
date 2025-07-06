@@ -5,7 +5,6 @@ set -gx EDITOR nvim
 fish_add_path /opt/homebrew/bin
 fish_add_path /home/irving_wash/jai/bin
 
-
 # Vim
 fish_vi_key_bindings
 fish_vi_cursor

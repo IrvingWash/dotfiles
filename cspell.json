@@ -1,7 +1,14 @@
 {
   "words": [
     "sketchybar",
-    "systempreferences"
+    "systempreferences",
+    "showdirtystate",
+    "showupstream",
+    "dirtystate",
+    "stagedstate",
+    "untrackedfiles",
+    "showuntrackedfiles",
+    "showstashstate"
   ],
   "userWords": [
     "Iosevka",

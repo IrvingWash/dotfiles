@@ -5,6 +5,8 @@ macos-option-as-alt = true
 window-decoration = false
 confirm-close-surface = false
 
+background = black
+
 # Key bindings
 # Select splits
 keybind = super+shift+i=goto_split:right
