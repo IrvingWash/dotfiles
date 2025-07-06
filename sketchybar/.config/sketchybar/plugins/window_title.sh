@@ -6,16 +6,16 @@ fi
 
 shopt -s nocasematch
 case $WINDOW_TITLE in
-    *nvim*) ICON=;;
-    *lazy*) ICON=󰊢;;
-    *git*) ICON=󰊢;;
-    *bat*) ICON=;;
-    *btm*) ICON=;;
-    *yazi*) ICON=;;
+    *nvim*)     ICON=;;
+    *lazy*)     ICON=󰊢;;
+    *git*)      ICON=󰊢;;
+    *bat*)      ICON=;;
+    *btm*)      ICON=;;
+    *yazi*)     ICON=;;
     *karakuri*) ICON=;;
     *projects*) ICON=󰅨;;
-    *ppg*) ICON=󰅨;;
-    *dot*) ICON=󱗿;;
+    *ppg*)      ICON=󰅨;;
+    *dot*)      ICON=󱗿;;
 esac
 
 if [[ ${#WINDOW_TITLE} -gt 50 ]]; then
