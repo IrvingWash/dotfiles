@@ -70,6 +70,27 @@ local telescope = {
 
 local git_signs = "lewis6991/gitsigns.nvim"
 
+local lazygit = {
+    "kdheepak/lazygit.nvim",
+    lazy = true,
+    cmd = {
+        "LazyGit",
+        "LazyGitConfig",
+        "LazyGitCurrentFile",
+        "LazyGitFilter",
+        "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+    -- setting the keybinding for LazyGit with 'keys' is recommended in
+    -- order to load the plugin when the command is run for the first time
+    keys = {
+        { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    },
+}
+
 local indent_blankline = "lukas-reineke/indent-blankline.nvim"
 
 local vim_illuminate = "RRethy/vim-illuminate"
@@ -122,6 +143,7 @@ require("lazy").setup({
         nvim_cmp,
         conform,
         telescope,
+        lazygit,
         git_signs,
         indent_blankline,
         vim_illuminate,
