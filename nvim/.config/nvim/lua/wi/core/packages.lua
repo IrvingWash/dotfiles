@@ -23,22 +23,18 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- plugins
-local nvim_tree_web_dev_icons = "nvim-tree/nvim-web-devicons"
-
-local neo_tree = {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons",
-        "MunifTanjim/nui.nvim",
-    },
-}
-
 local black_metal = "metalelf0/base16-black-metal-scheme"
 
 local mason = {
     "williamboman/mason.nvim",
+}
+
+local yazi = {
+    "mikavilpas/yazi.nvim",
+    event = "VeryLazy",
+    dependencies = {
+        { "nvim-lua/plenary.nvim", lazy = true },
+    },
 }
 
 local tree_sitter = {
@@ -116,9 +112,8 @@ local telescope_live_grep_args = {
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
-        nvim_tree_web_dev_icons,
-        neo_tree,
         black_metal,
+        yazi,
         mason,
         lsp_config,
         tree_sitter,
