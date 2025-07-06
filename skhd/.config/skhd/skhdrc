@@ -9,3 +9,27 @@ shift + alt - m : yabai -m window --swap west
 shift + alt - i : yabai -m window --swap east
 shift + alt - e : yabai -m window --swap north
 shift + alt - n : yabai -m window --swap south
+
+# create and focus space
+alt - 1 : ~/.config/skhd/focus_and_create_space_if_needed.sh 1
+alt - 2 : ~/.config/skhd/focus_and_create_space_if_needed.sh 2
+alt - 3 : ~/.config/skhd/focus_and_create_space_if_needed.sh 3
+alt - 4 : ~/.config/skhd/focus_and_create_space_if_needed.sh 4
+alt - 5 : ~/.config/skhd/focus_and_create_space_if_needed.sh 5
+alt - 6 : ~/.config/skhd/focus_and_create_space_if_needed.sh 6
+alt - 7 : ~/.config/skhd/focus_and_create_space_if_needed.sh 7
+alt - 8 : ~/.config/skhd/focus_and_create_space_if_needed.sh 8
+alt - 9 : ~/.config/skhd/focus_and_create_space_if_needed.sh 9
+alt - 0 : ~/.config/skhd/focus_and_create_space_if_needed.sh 10
+
+# move window to space
+shift + alt - 1 : ~/.config/skhd/move_and_create_space_if_needed.sh 1
+shift + alt - 2 : ~/.config/skhd/move_and_create_space_if_needed.sh 2
+shift + alt - 3 : ~/.config/skhd/move_and_create_space_if_needed.sh 3
+shift + alt - 4 : ~/.config/skhd/move_and_create_space_if_needed.sh 4
+shift + alt - 5 : ~/.config/skhd/move_and_create_space_if_needed.sh 5
+shift + alt - 6 : ~/.config/skhd/move_and_create_space_if_needed.sh 6
+shift + alt - 7 : ~/.config/skhd/move_and_create_space_if_needed.sh 7
+shift + alt - 8 : ~/.config/skhd/move_and_create_space_if_needed.sh 8
+shift + alt - 9 : ~/.config/skhd/move_and_create_space_if_needed.sh 9
+shift + alt - 0 : ~/.config/skhd/move_and_create_space_if_needed.sh 10
