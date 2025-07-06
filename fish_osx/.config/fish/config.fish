@@ -1,9 +1,10 @@
-# Disable greeting
 set fish_greeting
+set -gx EDITOR nvim
 
 # PATH
 fish_add_path /opt/homebrew/bin
 fish_add_path /home/irving_wash/jai/bin
+
 
 # Vim
 fish_vi_key_bindings
