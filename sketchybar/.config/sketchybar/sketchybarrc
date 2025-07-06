@@ -54,30 +54,53 @@ sketchybar \
         --add event keyboard_change "AppleSelectedInputSourcesChangedNotification" \
         --subscribe keyboard_layout keyboard_change                                \
     --add item ip_address right                                                    \
-        --set ip_address script="$PLUGIN_DIR/ip_address.sh"                        \
+        --set ip_address                                                           \
+            script="$PLUGIN_DIR/ip_address.sh"                                     \
+            click_script="open \"x-apple.systempreferences:com.apple.Network\""    \
             update_freq=30                                                         \
         --subscribe ip_address wifi_change                                         \
     --add item volume right                                                        \
-        --set volume script="$PLUGIN_DIR/volume.sh"                                \
+        --set volume                                                               \
+            script="$PLUGIN_DIR/volume.sh"                                         \
         --subscribe volume volume_change                                           \
     --add item battery right                                                       \
-        --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh"              \
+        --set battery                                                              \
+            update_freq=120 script="$PLUGIN_DIR/battery.sh"                        \
+            click_script="open \"x-apple.systempreferences:com.apple.Battery\""    \
         --subscribe battery system_woke power_source_change                        \
     --add item clock right                                                         \
-        --set clock update_freq=10 icon=󰥔 script="$PLUGIN_DIR/clock.sh"            \
+        --set clock                                                                \
+            update_freq=10                                                         \
+            icon=󰥔                                                                 \
+            script="$PLUGIN_DIR/clock.sh"                                          \
     --add item calendar right                                                      \
-        --set calendar icon= update_freq=1000 script="$PLUGIN_DIR/calendar.sh"    \
+        --set calendar                                                             \
+            icon=                                                                 \
+            update_freq=1000                                                       \
+            script="$PLUGIN_DIR/calendar.sh"                                       \
+            click_script="open /System/Applications/Calendar.app"                  \
     --add item telegram right                                                      \
         --set telegram                                                             \
             update_freq=10                                                         \
             script="$PLUGIN_DIR/telegram.sh"                                       \
+            click_script="open /Applications/Telegram.localized/Telegram.app"      \
         --subscribe telegram system_woke                                           \
+    --add item mail right                                                          \
+        --set mail                                                                 \
+            update_freq=60                                                         \
+            script="$PLUGIN_DIR/mail.sh"                                           \
+            click_script="open /Applications/Thunderbird.app"                      \
+        --subscribe mail system_woke                                               \
     --add item slack right                                                         \
         --set slack                                                                \
             update_freq=10                                                         \
             script="$PLUGIN_DIR/slack.sh"                                          \
+            click_script="open /Applications/Slack.app"                            \
         --subscribe slack system_woke                                              \
     --add item audio_device right                                                  \
-        --set audio_device update_freq=10 script="$PLUGIN_DIR/audio_device.sh"
+        --set audio_device                                                         \
+            update_freq=10                                                         \
+            script="$PLUGIN_DIR/audio_device.sh"                                   \
+            click_script="open \"x-apple.systempreferences:com.apple.Bluetooth\""  \
 
 sketchybar --update
