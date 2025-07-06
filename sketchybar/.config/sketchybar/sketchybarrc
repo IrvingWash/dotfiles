@@ -48,8 +48,12 @@ sketchybar \
         --set chevron icon=󰄾 label.drawing=off                             \
     --add item front_app left                                              \
         --set front_app                                                    \
-        script="$PLUGIN_DIR/front_app.sh"                                  \
+            script="$PLUGIN_DIR/front_app.sh"                              \
         --subscribe front_app front_app_switched                           \
+    --add item window_title left                                           \
+        --set window_title                                                 \
+            script="$PLUGIN_DIR/window_title.sh"                           \
+        --subscribe window_title window_focus title_change                 \
 
 # Right items
 sketchybar \
