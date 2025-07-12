@@ -26,4 +26,7 @@ keybind = alt+shift+n=resize_split:down,10
 # Window
 keybind = alt+w=close_surface
 
+#Shaders
+custom-shader = shaders/cursor_smear.glsl
+
 # vim: ft=cfg
