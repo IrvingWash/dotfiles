@@ -23,7 +23,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- plugins
-local black_metal = "metalelf0/base16-black-metal-scheme"
+local catppuccin = { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
 
 local mason = {
     "williamboman/mason.nvim",
@@ -135,7 +135,7 @@ local easy_align = "junegunn/vim-easy-align"
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
-        black_metal,
+        catppuccin,
         yazi,
         mason,
         lsp_config,
