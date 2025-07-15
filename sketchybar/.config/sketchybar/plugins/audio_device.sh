@@ -2,7 +2,7 @@
 
 CURRENT_DEVICE="$(SwitchAudioSource -c)"
 
-if [[ "$CURRENT_DEVICE" == *Pods* || "$CURRENT_DEVICE" == *Buds* ]]; then
+if [[ "$CURRENT_DEVICE" == *AirPods* || "$CURRENT_DEVICE" == *Buds* ]]; then
     ICON=󰋋
 else
     ICON=󰟎
