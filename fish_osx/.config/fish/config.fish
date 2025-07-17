@@ -3,7 +3,8 @@ set -gx EDITOR nvim
 
 # PATH
 fish_add_path /opt/homebrew/bin
-fish_add_path /home/irving_wash/jai/bin
+fish_add_path /Users/irvingwash/jai/bin
+fish_add_path /Users/irvingwash/apps
 
 # Vim
 fish_vi_key_bindings

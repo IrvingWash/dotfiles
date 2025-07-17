@@ -1,4 +1,5 @@
 local lspconfig = require("lspconfig")
+local configs = require("lspconfig.configs")
 
 vim.keymap.set("n", "<leader>x", vim.diagnostic.open_float)
 vim.keymap.set("n", "<leader>nx", vim.diagnostic.goto_next)
@@ -46,3 +47,15 @@ lspconfig.hyprls.setup({
 })
 
 vim.lsp.enable("cspell_ls")
+
+if not configs.jails then
+    configs.jails = {
+        default_config = {
+            cmd = { "jails" },
+            root_dir = lspconfig.util.root_pattern(".git"),
+            filetypes = { "jai" },
+        },
+    }
+end
+
+lspconfig.jails.setup({})
