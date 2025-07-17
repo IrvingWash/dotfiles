@@ -37,4 +37,12 @@ lspconfig.eslint.setup({
     capabilities = capabilities,
 })
 
+lspconfig.eslint.setup({
+    capabilities = capabilities,
+})
+
+lspconfig.hyprls.setup({
+    capabilities = capabilities,
+})
+
 vim.lsp.enable("cspell_ls")

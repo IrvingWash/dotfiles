@@ -3,14 +3,7 @@ local conform = require("conform")
 conform.setup({
     formatters_by_ft = {
         rust = { "rustfmt" },
-        odin = { "odinfmt" },
         lua = { "stylua" },
-    },
-    formatters = {
-        odinfmt = {
-            command = "odinfmt",
-            args = { "-stdin" },
-        },
     },
 })
 
