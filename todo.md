@@ -1,4 +1,4 @@
 [x] mako (ala dunst)
-[ ] configur waybar
+[x] configur waybar
 [ ] configur wofi
 [x] wallpaper (hyprpaper)
