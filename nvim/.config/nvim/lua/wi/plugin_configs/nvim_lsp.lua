@@ -58,4 +58,6 @@ if not configs.jails then
     }
 end
 
-lspconfig.jails.setup({})
+lspconfig.jails.setup({
+    capabilities = capabilities,
+})
