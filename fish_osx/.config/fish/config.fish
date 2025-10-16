@@ -4,6 +4,7 @@ set -gx EDITOR nvim
 # PATH
 fish_add_path /opt/homebrew/bin
 fish_add_path /Users/irvingwash/jai/bin
+fish_add_path /Users/agulakhszyan/jai/bin
 fish_add_path /Users/irvingwash/apps
 
 # Vim
@@ -14,7 +15,9 @@ fish_vi_cursor
 alias ls='eza --color=always --icons=always --classify=always -l -a --group-directories-first --show-symlinks --modified'
 alias tree='eza -T'
 alias ppg='cd ~/Documents/ppg'
+alias pr='cd ~/Documents/projects'
 alias lazy='lazygit'
+alias tv='cd /Users/agulakhszyan/Documents/projects/tradingview'
 
 # Functions
 function repo
