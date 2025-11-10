@@ -10,41 +10,29 @@ vim.keymap.set("n", "<leader>fx", vim.lsp.buf.code_action)
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-lspconfig.rust_analyzer.setup({
-    capabilities = capabilities,
-})
+vim.lsp.config("rust_analyzer", { capabilities = capabilities })
+vim.lsp.enable("rust_analyzer")
 
-lspconfig.lua_ls.setup({
-    capabilities = capabilities,
-})
+vim.lsp.config("lua_ls", { capabilities = capabilities })
+vim.lsp.enable("lua_ls")
 
-lspconfig.glsl_analyzer.setup({
-    capabilities = capabilities,
-})
+vim.lsp.config("glsl_analyzer", { capabilities = capabilities })
+vim.lsp.enable("glsl_analyzer")
 
-lspconfig.gopls.setup({
-    capabilities = capabilities,
-})
+vim.lsp.config("gopls", { capabilities = capabilities })
+vim.lsp.enable("gopls")
 
-lspconfig.clangd.setup({
-    capabilities = capabilities,
-})
+vim.lsp.config("clangd", { capabilities = capabilities })
+vim.lsp.enable("clangd")
 
-lspconfig.ts_ls.setup({
-    capabilities = capabilities,
-})
+vim.lsp.config("ts_ls", { capabilities = capabilities })
+vim.lsp.enable("ts_ls")
 
-lspconfig.eslint.setup({
-    capabilities = capabilities,
-})
+vim.lsp.config("eslint", { capabilities = capabilities })
+vim.lsp.enable("eslint")
 
-lspconfig.eslint.setup({
-    capabilities = capabilities,
-})
-
-lspconfig.hyprls.setup({
-    capabilities = capabilities,
-})
+vim.lsp.config("hyprls", { capabilities = capabilities })
+vim.lsp.enable("hyprls")
 
 vim.lsp.enable("cspell_ls")
 
