@@ -3,8 +3,6 @@ require("nvim-treesitter.configs").setup({
         "c",
         "lua",
         "markdown",
-        "html",
-        "css",
         "typescript",
         "rust",
         "go",
@@ -15,5 +13,5 @@ require("nvim-treesitter.configs").setup({
     },
     indent = {
         enable = true,
-    }
+    },
 })
