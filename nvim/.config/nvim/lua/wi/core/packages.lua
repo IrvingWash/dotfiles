@@ -132,6 +132,13 @@ local telescope_live_grep_args = {
 
 local easy_align = "junegunn/vim-easy-align"
 
+local typst_preview = {
+    "chomosuke/typst-preview.nvim",
+    lazy = false,
+    version = "1.*",
+    opts = {},
+}
+
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
@@ -158,5 +165,6 @@ require("lazy").setup({
         scratch,
         telescope_live_grep_args,
         easy_align,
+        typst_preview,
     },
 })

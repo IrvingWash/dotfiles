@@ -34,6 +34,9 @@ vim.lsp.enable("eslint")
 vim.lsp.config("hyprls", { capabilities = capabilities })
 vim.lsp.enable("hyprls")
 
+vim.lsp.config("tinymist", { capabilities = capabilities })
+vim.lsp.enable("tinymist")
+
 vim.lsp.enable("cspell_ls")
 
 if not configs.jails then
