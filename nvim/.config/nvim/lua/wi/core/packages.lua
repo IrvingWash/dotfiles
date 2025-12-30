@@ -139,6 +139,14 @@ local typst_preview = {
     opts = {},
 }
 
+local autopairs = {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true,
+    -- use opts = {} for passing setup options
+    -- this is equivalent to setup({}) function
+}
+
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
@@ -166,5 +174,6 @@ require("lazy").setup({
         telescope_live_grep_args,
         easy_align,
         typst_preview,
+        autopairs,
     },
 })
