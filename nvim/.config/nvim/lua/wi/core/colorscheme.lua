@@ -10,4 +10,6 @@
 
 -- vim.cmd("colorscheme monoglow-void")
 
-vim.cmd("colorscheme lackluster-dark")
+-- vim.cmd("colorscheme lackluster-dark")
+
+vim.cmd("colorscheme github-monochrome-solarized")

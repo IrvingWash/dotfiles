@@ -160,6 +160,13 @@ local luckluster = {
     priority = 1000,
 }
 
+local github_monochrome = {
+    "idr4n/github-monochrome.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+}
+
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
@@ -190,5 +197,6 @@ require("lazy").setup({
         autopairs,
         monoglow,
         luckluster,
+        github_monochrome,
     },
 })
