@@ -147,6 +147,19 @@ local autopairs = {
     -- this is equivalent to setup({}) function
 }
 
+local monoglow = {
+    "wnkz/monoglow.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+}
+
+local luckluster = {
+    "slugbyte/lackluster.nvim",
+    lazy = false,
+    priority = 1000,
+}
+
 require("lazy").setup({
     checker = { enabled = true },
     spec = {
@@ -175,5 +188,7 @@ require("lazy").setup({
         easy_align,
         typst_preview,
         autopairs,
+        monoglow,
+        luckluster,
     },
 })

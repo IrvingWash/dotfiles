@@ -1,9 +1,13 @@
-vim.cmd("colorscheme catppuccin")
+-- vim.cmd("colorscheme catppuccin")
+--
+-- local current_hour = tonumber(os.date("%H"))
+--
+-- if current_hour >= 20 or current_hour <= 7 then
+--     vim.cmd("set background=dark")
+-- else
+--     vim.cmd("set background=light")
+-- end
 
-local current_hour = tonumber(os.date("%H"))
+-- vim.cmd("colorscheme monoglow-void")
 
-if current_hour >= 20 or current_hour <= 7 then
-    vim.cmd("set background=dark")
-else
-    vim.cmd("set background=light")
-end
+vim.cmd("colorscheme lackluster-dark")
