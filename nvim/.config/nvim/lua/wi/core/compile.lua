@@ -1,87 +1,66 @@
-local compile_buffer = nil
-local last_cmd = nil
-local namespace = vim.api.nvim_create_namespace("compile_stderr")
+local M = {}
 
--- Highlight for stderr
-vim.api.nvim_set_hl(0, "CompileStderr", { fg = "#ff5555" })
+local function find_compile_buf()
+    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+        if
+            vim.api.nvim_buf_is_loaded(buf)
+            and vim.api.nvim_buf_get_name(buf) == "*compile*"
+        then
+            return buf
+        end
+    end
+end
 
-vim.keymap.set("n", "<leader>c", function()
-    local cmd = vim.fn.input("Compile command: ", last_cmd or "")
+function M.compile()
+    local cmd = vim.fn.input({
+        prompt = "Compile command: ",
+        completion = "shellcmdline",
+        history = "cmdline",
+    })
+
     if cmd == "" then
         return
     end
 
-    last_cmd = cmd
+    local buf = find_compile_buf()
 
-    -- Create or reuse buffer
-    if not compile_buffer or not vim.api.nvim_buf_is_valid(compile_buffer) then
-        compile_buffer = vim.api.nvim_create_buf(false, true)
-        vim.api.nvim_buf_set_name(compile_buffer, "[Compile]")
-        vim.bo[compile_buffer].buftype = "nofile"
-        vim.bo[compile_buffer].bufhidden = "hide"
-        vim.bo[compile_buffer].swapfile = false
+    vim.cmd("tabnew")
+
+    if buf then
+        vim.api.nvim_set_current_buf(buf)
+
+        -- Stop previous job if still running
+        if vim.b.terminal_job_id then
+            vim.fn.jobstop(vim.b.terminal_job_id)
+        end
+
+        -- Clear terminal (Ctrl-L)
+        vim.api.nvim_chan_send(vim.b.terminal_job_id or 0, "\x0c")
+    else
+        buf = vim.api.nvim_get_current_buf()
+        vim.api.nvim_buf_set_name(buf, "*compile*")
+
+        vim.bo.bufhidden = "hide"
+        vim.bo.swapfile = false
+        vim.bo.filetype = "compile"
     end
 
-    -- Show buffer
-    vim.cmd("botright split")
-    vim.api.nvim_win_set_buf(0, compile_buffer)
-
-    -- Clear buffer
-    vim.api.nvim_buf_clear_namespace(compile_buffer, namespace, 0, -1)
-    vim.api.nvim_buf_set_lines(
-        compile_buffer,
-        0,
-        -1,
-        false,
-        { "$ " .. cmd, "" }
-    )
-
-    local function append(lines, hl)
-        if not lines then
-            return
-        end
-        -- Remove trailing empty line jobstart adds
-        if #lines > 0 and lines[#lines] == "" then
-            table.remove(lines)
-        end
-        if #lines == 0 then
-            return
-        end
-
-        local start = vim.api.nvim_buf_line_count(compile_buffer)
-        vim.api.nvim_buf_set_lines(compile_buffer, -1, -1, false, lines)
-
-        if hl then
-            for i = 0, #lines - 1 do
-                vim.api.nvim_buf_add_highlight(
-                    compile_buffer,
-                    namespace,
-                    hl,
-                    start + i,
-                    0,
-                    -1
-                )
-            end
-        end
-
-        vim.cmd("normal! G")
-    end
-
-    -- Run command
-    vim.fn.jobstart(cmd, {
-        stdout_buffered = false,
-        stderr_buffered = false,
-
-        on_stdout = function(_, data)
-            append(data, nil)
-        end,
-
-        on_stderr = function(_, data)
-            append(data, "CompileStderr")
-        end,
-
+    -- Start terminal job (this sets buftype=terminal internally)
+    vim.fn.termopen(cmd, {
         on_exit = function()
-            append({ "", "[Process finished]" }, nil)
+            vim.schedule(function()
+                if vim.api.nvim_get_current_buf() == buf then
+                    vim.cmd("stopinsert")
+                end
+            end)
         end,
     })
-end, { silent = true })
+
+    -- UX
+    vim.cmd("startinsert")
+    vim.opt_local.number = false
+    vim.opt_local.relativenumber = false
+    vim.opt_local.signcolumn = "no"
+end
+
+return M
